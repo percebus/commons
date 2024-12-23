@@ -2,7 +2,7 @@
 
 {FIXME}
 
-# Description
+# Details
 
 {FIXME}
 
