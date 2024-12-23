@@ -1,0 +1,36 @@
+{
+  "name": "commons",
+  "version": "1.0.0",
+  "description": "github workflows, DevOps, scripts and other re-usable assets",
+  "main": "index.js",
+  "scripts": {
+    "prettier": "prettier .",
+    "prettier:write": "npm run prettier -- --write",
+    "prettier:check": "npm run prettier -- --check",
+    "lint": "npm run prettier:check",
+    "style": "npm run prettier:write",
+    "poststyle": "npm run lint",
+    "pretest": "npm run lint",
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/percebus/commons.git"
+  },
+  "keywords": [
+    "github",
+    "workflows",
+    "actions",
+    "templates",
+    "scripts"
+  ],
+  "author": "JCystems",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/percebus/commons/issues"
+  },
+  "homepage": "https://github.com/percebus/commons#readme",
+  "devDependencies": {
+    "prettier": "^3.4.2"
+  }
+}
