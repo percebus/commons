@@ -7,7 +7,7 @@ inputs:
 
     # SRC: https://nodejs.org/en/about/previous-releases
     # TODO? Use LTS or something
-    default: '22'
+    default: "22"
 
 outputs:
   version:
