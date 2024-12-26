@@ -11,10 +11,13 @@ runs:
   using: composite
   steps:
     - name: npm run setup
+      shell: bash
       run: npm run setup --if-present
 
     - name: npm install
+      shell: bash
       run: npm ci
 
     - name: ls
+      shell: bash
       run: ls ${{ inputs.ls_opts }} ./node_modules

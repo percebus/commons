@@ -14,4 +14,5 @@ runs:
       uses: actions/checkout@v3
 
     - name: ls
+      shell: bash
       run: ls ${{ inputs.ls_opts }}
