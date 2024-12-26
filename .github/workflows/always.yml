@@ -7,8 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     name: npm test
     steps:
-      - uses: percebus/commons/.github/actions/checkout@feat/actions
-      - uses: percebus/commons/.github/actions/node_setup@feat/actions
-      - uses: percebus/commons/.github/actions/npm_install@feat/actions
+      # FIXME use relative local path
+      - uses: percebus/commons/.github/actions/checkout
+      - uses: percebus/commons/.github/actions/node_setup
+      - uses: percebus/commons/.github/actions/npm_install
+
       - name: npm test
         run: npm test
