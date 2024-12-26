@@ -7,10 +7,10 @@ inputs:
 
     # SRC: https://nodejs.org/en/about/previous-releases
     # NOTE: As of 2024-12-26:
-    # - LTS = 20x
+    # - LTS = error
     # - Active = 20x
     # - Current = 20x
-    default: LTS
+    default: active
 
 outputs:
   version:
