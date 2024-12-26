@@ -31,4 +31,4 @@ runs:
       if: ${{ inputs.run_npm_audit == 'true' }}
       shell: bash
       run: npm audit
-      continue-on-error: true # XXX?
+      continue-on-error: true
