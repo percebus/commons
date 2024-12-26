@@ -3,14 +3,8 @@ on:
   push:
 
 jobs:
-  npm_test:
-    runs-on: ubuntu-latest
-    name: npm test
-    steps:
-      # FIXME use relative local path
-      - uses: percebus/commons/.github/actions/checkout@main
-      - uses: percebus/commons/.github/actions/node_setup@main
-      - uses: percebus/commons/.github/actions/npm_install@main
+  npm_lint:
+    uses: percebus/commons/.github/shared/workflows/npm_run_lint.yml@main
 
-      - name: npm run lint
-        run: npm run lint
+  npm_audit:
+    uses: percebus/commons/.github/shared/workflows/npm_audit.yml@main

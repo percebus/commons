@@ -11,10 +11,4 @@ permissions:
 
 jobs:
   dependency-review:
-    name: Dependency Review
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@v3
-      - name: dependency-review
-        uses: actions/dependency-review-action@v2
+    uses: percebus/commons/.github/shared/workflows/dependency-revie.yml@main

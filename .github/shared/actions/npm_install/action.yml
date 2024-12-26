@@ -7,11 +7,6 @@ inputs:
     # in windows, la does NOT work
     default: "-la"
 
-  run_npm_audit:
-    description: npm audit
-    required: false
-    default: "false"
-
 runs:
   using: composite
   steps:
@@ -26,9 +21,3 @@ runs:
     - name: ls
       shell: bash
       run: ls ${{ inputs.ls_opts }} ./node_modules
-
-    - name: npm audit
-      if: ${{ inputs.run_npm_audit == 'true' }}
-      shell: bash
-      run: npm audit
-      continue-on-error: true
