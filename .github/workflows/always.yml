@@ -7,8 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     name: npm test
     steps:
-      - uses: .github/actions/checkout@main
-      - uses: .github/actions/node_setup@main
-      - uses: .github/actions/npm_install@main
+      - uses: .github/actions/checkout
+      - uses: .github/actions/node_setup
+      - uses: .github/actions/npm_install
       - name: npm test
         run: npm test
