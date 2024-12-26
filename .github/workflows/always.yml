@@ -7,8 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     name: npm test
     steps:
-      - uses: ../actions/checkout
-      - uses: ../actions/node_setup
-      - uses: ../actions/npm_install
+      - uses: percebus/commons/.github/actions/checkout@feat/actions
+      - uses: percebus/commons/.github/actions/node_setup@feat/actions
+      - uses: percebus/commons/.github/actions/npm_install@feat/actions
       - name: npm test
         run: npm test
