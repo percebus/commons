@@ -6,7 +6,7 @@ inputs:
     required: false
 
     # TODO? - update to latest LTS
-    default: "22"
+    default: LTS
 
 outputs:
   version:
@@ -22,4 +22,6 @@ runs:
     - name: node version
       id: node-version
       shell: bash
-      run: echo "version=$(echo node --version)" >> $GITHUB_OUTPUT
+      run: |
+        node --version
+        echo "version=$(echo node --version)" >> $GITHUB_OUTPUT
