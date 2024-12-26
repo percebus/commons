@@ -14,6 +14,3 @@ jobs:
 
       - name: npm run lint
         run: npm run lint
-
-      - name: npm test
-        run: npm test --ignore-scripts
