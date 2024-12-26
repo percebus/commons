@@ -8,9 +8,9 @@ jobs:
     name: npm test
     steps:
       # FIXME use relative local path
-      - uses: percebus/commons/.github/actions/checkout
-      - uses: percebus/commons/.github/actions/node_setup
-      - uses: percebus/commons/.github/actions/npm_install
+      - uses: percebus/commons/.github/actions/checkout@main
+      - uses: percebus/commons/.github/actions/node_setup@main
+      - uses: percebus/commons/.github/actions/npm_install@main
 
       - name: npm run lint
         run: npm run lint
