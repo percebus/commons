@@ -5,8 +5,11 @@ inputs:
     description: node version
     required: false
 
-    # TODO? - update to latest LTS
-    default: LTS
+    # NOTE: As of 2024-12-26:
+    # - LTS = 20x
+    # - Active = ???
+    # - Current = ???
+    default: active
 
 outputs:
   version:
