@@ -11,22 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     name: npm test
     steps:
-      - name: checkout
-        uses: actions/checkout@v3
-      - name: ls
-        run: ls -la
-
-      - name: setup node @ ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-
-      - name: setup
-        run: npm run setup:ci --if-present
-      - name: npm install
-        run: npm ci
-      - name: ls node_modules
-        run: ls -la ./node_modules
-
+      - uses: ../actions/checkout
+      - uses: ../actions/node_setup
+      - uses: ../actions/npm_install
       - name: npm test
         run: npm test
