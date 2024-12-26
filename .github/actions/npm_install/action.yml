@@ -1,6 +1,11 @@
 name: npm install
 description: npm install
 inputs:
+  run_npm_audit:
+    description: npm audit
+    required: false
+    default: "false"
+
   ls_opts:
     description: ls options
     required: false
@@ -23,6 +28,7 @@ runs:
       run: ls ${{ inputs.ls_opts }} ./node_modules
 
     - name: npm audit
+      if: ${{ inputs.run_npm_audit == 'true' }}
       shell: bash
       run: npm audit
       continue-on-error: true # XXX?
