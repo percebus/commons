@@ -12,5 +12,8 @@ jobs:
       - uses: percebus/commons/.github/actions/node_setup
       - uses: percebus/commons/.github/actions/npm_install
 
+      - name: npm run lint
+        run: npm run lint
+
       - name: npm test
-        run: npm test
+        run: npm test --ignore-scripts
