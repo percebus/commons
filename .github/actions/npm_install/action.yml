@@ -21,3 +21,8 @@ runs:
     - name: ls
       shell: bash
       run: ls ${{ inputs.ls_opts }} ./node_modules
+
+    - name: npm audit
+      shell: bash
+      run: npm audit
+      continue-on-error: true # XXX?
