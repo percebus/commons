@@ -11,7 +11,7 @@ inputs:
 
 outputs:
   version:
-    description: "Random number"
+    description: "node --version"
     value: ${{ steps.node-version.outputs.node-version }}
 
 runs:
