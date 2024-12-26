@@ -1,16 +1,16 @@
 name: npm install
 description: npm install
 inputs:
-  run_npm_audit:
-    description: npm audit
-    required: false
-    default: "false"
-
   ls_opts:
     description: ls options
     required: false
     # in windows, la does NOT work
     default: "-la"
+
+  run_npm_audit:
+    description: npm audit
+    required: false
+    default: "false"
 
 runs:
   using: composite
