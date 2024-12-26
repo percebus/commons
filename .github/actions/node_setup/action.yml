@@ -7,9 +7,9 @@ inputs:
 
     # NOTE: As of 2024-12-26:
     # - LTS = 20x
-    # - Active = ???
+    # - Active = 20x
     # - Current = ???
-    default: active
+    default: current
 
 outputs:
   version:
