@@ -1,4 +1,5 @@
 on:
+  push:
   workflow_call: # Indicates that this is a reusable workflow
     # inputs:
 
