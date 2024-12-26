@@ -1,0 +1,24 @@
+name: setup node
+description: setup node
+inputs:
+  version:
+    description: node version
+    required: false
+
+    # TODO? - update to latest LTS
+    default: 22
+
+outputs:
+  version:
+    description: "Random number"
+    value: ${{ steps.node-version.outputs.version }}
+
+runs:
+  using: composite
+  steps:
+    - name: setup node @ ${{ inputs.version }}
+      uses: actions/setup-node@v3
+
+    - name: node version
+      id: node-version
+      run: echo "version=$(echo node --version)" >> $GITHUB_OUTPUT
