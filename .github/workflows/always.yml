@@ -1,0 +1,12 @@
+name: Verify
+
+on:
+  push:
+  workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
+
+jobs:
+  npm_audit:
+    uses: percebus/github-actions-npm/.github/actions/npm_audit@main
+
+  npm_run_lint:
+    uses: percebus/github-actions-npm/.github/actions/npm_run_lint@main
