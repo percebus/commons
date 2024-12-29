@@ -6,7 +6,7 @@ on:
 
 jobs:
   npm_audit:
-    uses: percebus/github-actions-npm/.github/actions/npm_audit@main
+    uses: percebus/github-actions-npm/.github/workflows/npm_audit.yml@main
 
   npm_run_lint:
-    uses: percebus/github-actions-npm/.github/actions/npm_run_lint@main
+    uses: percebus/github-actions-npm/.github/workflows/npm_run_lint.yml@main
