@@ -9,18 +9,19 @@ PIP_CLI_OPTS=""
 requirements="requirements.txt"
 if [[ "$target_config" == "release" ]]; then
     echo "Installing ONLY prd requirements..."
-    requirements="requirements.min.txt"
+    requirements="requirements.release.txt"
 else
     PIP_CLI_OPTS="-e"
     echo "Installing everything..."
 fi
 
-set -v
+set -x
 
-python -m pip install --verbose --upgrade pip
-python -m pip install --verbose --upgrade --requirement requirements.upgrade.txt
+# all pip dependencies (generated w/ poetry)
 python -m pip install --verbose --requirement ${requirements}
+
+# The project itself (to use src)
 python -m pip install --verbose ${PIP_CLI_OPTS} .
 
-set +v
+set +x
 set +e
