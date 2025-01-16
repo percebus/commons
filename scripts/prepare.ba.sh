@@ -12,11 +12,11 @@ echo "scripts directory: ${scripts_path}"
 rm -rf ${scripts_path}
 
 # Copy commons scripts into _scripts
-cp ./repos/commons/scripts ${scripts_path} -r
+# FIX: https://unix.stackexchange.com/a/18718/103371
+cp ./repos/commons/scripts ${scripts_path} -R
 
 # override _scripts with scripts in the other repo (if any)
 # Or skip if the folder does NOT exist
-# FIX: https://unix.stackexchange.com/a/18718/103371
 cp ./scripts/* ${scripts_path} -R | true
 
 # Make all scripts executable
