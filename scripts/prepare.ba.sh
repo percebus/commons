@@ -16,7 +16,8 @@ cp ./repos/commons/scripts ${scripts_path} -r
 
 # override _scripts with scripts in the other repo (if any)
 # Or skip if the folder does NOT exist
-cp ./scripts/* ${scripts_path} -r | true
+# FIX: https://unix.stackexchange.com/a/18718/103371
+cp ./scripts/* ${scripts_path} -R | true
 
 # Make all scripts executable
 find _scripts/ -name "*.sh" -exec chmod +x {} \;
