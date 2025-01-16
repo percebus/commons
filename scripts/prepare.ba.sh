@@ -13,11 +13,11 @@ rm -rf ${scripts_path}
 
 # Copy commons scripts into _scripts
 # FIX: https://unix.stackexchange.com/a/18718/103371
-cp ./repos/commons/scripts ${scripts_path} -R
+cp -R ./repos/commons/scripts ${scripts_path}
 
 # override _scripts with scripts in the other repo (if any)
 # Or skip if the folder does NOT exist
-cp ./scripts/* ${scripts_path} -R | true
+cp -R ./scripts/* ${scripts_path} | true
 
 # Make all scripts executable
 find _scripts/ -name "*.sh" -exec chmod +x {} \;
