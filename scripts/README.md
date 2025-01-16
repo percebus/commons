@@ -33,12 +33,13 @@ _scripts/
     "setup:ci": "npm run npm:install:global:ci",
     "setup:release": "npm run pip:install:release",
 
+    "scripts:prepare": "bash repos/commons/scripts/prepare.ba.sh",
     "bower:update": "bower update --allow-root",
     "prebower:install": "npm run bower:update",
     "bower:install": "bower install --allow-root",
-    "scripts:prepare": "bash repos/commons/scripts/prepare.ba.sh",
+    "postbower:install": "npm run scripts:prepare",
 
-    "postinstall": "npm run bower:install && npm run scripts:prepare",
+    "postinstall": "npm run bower:install",
 }
 ```
 
