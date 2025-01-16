@@ -3,7 +3,7 @@
 # NOTE: Merges repos/commons/scripts and scripts into _scripts
 
 set -e
-set -v
+set -x
 
 scripts_path='./_scripts'
 echo "scripts directory: ${scripts_path}"
@@ -25,5 +25,5 @@ ls -la ${scripts_path}
 bash ${scripts_path}/bash/clean.ba.sh
 bash ${scripts_path}/setup.ba.sh
 
-set +v
+set +x
 set +e
