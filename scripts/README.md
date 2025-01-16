@@ -10,11 +10,11 @@ This directory contains scripts that are used to setup any and all projects.
 
 ```json
 {
-  "directory" : "repos"
+  "directory": "repos"
 }
 ```
 
-#### .*ignore files
+#### .\*ignore files
 
 ```gitignore
 # commons/scripts
