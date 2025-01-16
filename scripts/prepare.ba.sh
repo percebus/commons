@@ -22,7 +22,7 @@ cp ./scripts/* ${scripts_path} -r | true
 find _scripts/ -name "*.sh" -exec chmod +x {} \;
 
 ls -la ${scripts_path}
-bash ${scripts_path}/clean.ba.sh
+bash ${scripts_path}/bash/clean.ba.sh
 
 set +v
 set +e
