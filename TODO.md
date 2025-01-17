@@ -2,4 +2,4 @@
 
 # TODOs
 
-- [ ] TBD.
+- [ ] Fix `batch_run.ba.sh`
