@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "ignore": ["**/.*", "node_modules", "repos"],
+  "devDependencies": {
+    "commons": "git@github.com:percebus/commons.git#main"
+  }
+}

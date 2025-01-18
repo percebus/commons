@@ -31,7 +31,6 @@ _scripts/
 
     "setup": "npm run npm:install:global:all",
     "setup:ci": "npm run npm:install:global:ci",
-    "setup:release": "npm run pip:install:release",
 
     "scripts:prepare": "bash repos/commons/scripts/prepare.ba.sh",
     "bower:update": "bower update --allow-root",

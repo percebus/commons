@@ -1,0 +1,9 @@
+# commons/scripts
+repos/
+_scripts/
+
+# default # SRC: https://prettier.io/docs/en/ignore.html
+**/.git
+**/.svn
+**/.hg
+node_modules/

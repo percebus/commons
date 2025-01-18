@@ -11,4 +11,4 @@ permissions:
 
 jobs:
   dependency-review:
-    uses: percebus/github-actions-common/.github/workflows/dependency-review.yml@main
+    uses: percebus/github-actions-npm/.github/workflows/dependency-review.yml@main
