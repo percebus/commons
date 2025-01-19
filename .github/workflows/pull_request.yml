@@ -10,5 +10,5 @@ permissions:
   contents: read
 
 jobs:
-  dependency-review:
+  audit:
     uses: percebus/github-actions-npm/.github/workflows/dependency-review.yml@main
