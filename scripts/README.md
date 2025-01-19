@@ -4,6 +4,14 @@ This directory contains scripts that are used to setup any and all projects.
 
 ## Setup
 
+All these setups assume that the `commons` repository is located in `repos/commons`.
+
+### scripts/prepare.ba.sh
+
+1. Deletes `_scripts/`
+1. Copies `{component}/common/scripts/` as `_scripts/`.
+1. Copies `scripts/**` into `_scripts/` (overriding each and all files if applicable).
+
 ### w/ bower
 
 #### .bowerrc
@@ -42,13 +50,42 @@ _scripts/
 }
 ```
 
+#### npm install
+
 Then
 
 1. `$> npm run setup --if-present`
 2. `$> npm install`
 
-## scripts/prepare.ba.sh
+### w/ gil
 
-1. Deletes `_scripts/`
-1. Copies `{component}/common/scripts/` as `_scripts/`.
-1. Copies `scripts/**` into `_scripts/` (overriding each and all files if applicable).
+For reference [see `references/gil`](../references/gil/)
+
+#### via pip
+
+```bash
+$> pip install pip --upgrade
+$> pip install gil
+```
+
+[See `requirements.upgrade.txt`](../references/gil/requirements.upgrade.txt)
+
+#### .gitlinks
+
+```
+commons repos/commons git@github.com:percebus/commons.git main
+```
+
+[See a `.gitlinks` example](../references/gil/commons.gitlinks)
+
+#### gil clone
+
+```bash
+$> gil clone
+```
+
+#### scripts/prepare.ba.sh
+
+```bash
+$> bash repos/commons/scripts/prepare.ba.sh
+```
