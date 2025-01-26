@@ -9,3 +9,4 @@ jobs:
     uses: percebus/github-actions-npm/.github/workflows/npm_run_script.yml@main
     with:
       script: lint
+      working-directory: .
