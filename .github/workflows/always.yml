@@ -5,7 +5,7 @@ on:
   workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
 
 jobs:
-  npm_run_lint:
+  lint:
     uses: percebus/github-actions-npm/.github/workflows/npm_run_script.yml@main
     with:
       script: lint
