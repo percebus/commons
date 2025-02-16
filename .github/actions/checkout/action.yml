@@ -31,6 +31,8 @@ runs:
         fetch-depth: ${{ matrix.fetch-depth }}
         ls_options: ${{ matrix.ls_options }}
 
+    # TODO git checkout commons inside repos/commons
+
     - name: scripts/prepare.ba.sh
       shell: bash
       run: bash scripts/prepare.ba.sh
