@@ -24,7 +24,6 @@ find _scripts/ -name "*.sh" -exec chmod +x {} \;
 
 ls -la ${scripts_path}
 bash ${scripts_path}/bash/clean.ba.sh
-bash ${scripts_path}/setup.ba.sh
 
 set +x
 set +e

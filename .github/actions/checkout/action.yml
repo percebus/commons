@@ -1,0 +1,36 @@
+name: checkout
+description: checkout and do some other things
+inputs:
+  ssh-private-key:
+    description: SSH private key
+    required: false
+
+  submodules:
+    description: whether to update submodules
+    required: false
+    default: "false"
+
+  fetch-depth:
+    description: git checkout fetch-depth
+    required: false
+    default: "0"
+
+  ls_options:
+    description: ls options
+    required: false
+    # in windows, la does NOT work
+    default: "-la"
+
+runs:
+  using: composite
+  steps:
+    - uses: percebus/github-actions-common/.github/actions/checkout@main
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+        submodules: ${{ matrix.submodules }}
+        fetch-depth: ${{ matrix.fetch-depth }}
+        ls_options: ${{ matrix.ls_options }}
+
+    - name: scripts/prepare.ba.sh
+      shell: bash
+      run: bash scripts/prepare.ba.sh
