@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     name: "default"
     steps:
-      - uses: percebus/github-actions-common/.github/actions/checkout@main
+      - uses: ./.github/actions/checkout
 
       - name: ls repositories
         run: ls ./repositories
@@ -33,7 +33,7 @@ jobs:
     runs-on: ${{ matrix.OS }}
     name: "ls ${{ matrix.ls_options }} @ ${{ matrix.OS }}"
     steps:
-      - uses: percebus/github-actions-common/.github/actions/checkout@main
+      - uses: ./.github/actions/checkout
         with:
           ls_options: ${{ matrix.ls_options }}
 
@@ -56,6 +56,6 @@ jobs:
     runs-on: ${{ matrix.OS }}
     name: "git fetch-depth:${{ matrix.fetch-depth }} @ ${{ matrix.OS }}"
     steps:
-      - uses: percebus/github-actions-common/.github/actions/checkout@main
+      - uses: ./.github/actions/checkout
         with:
           fetch-depth: ${{ matrix.fetch-depth }}
