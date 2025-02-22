@@ -44,4 +44,4 @@ runs:
 
     - name: ls _scripts
       shell: bash
-      run: ls ${{ inputs.ls_options }} repositories/commons/_scripts
+      run: ls ${{ inputs.ls_options }} ./_scripts
