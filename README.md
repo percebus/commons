@@ -9,3 +9,11 @@ Re-usable
 - `gitbub` workflows
 - `scripts`
 - etc
+
+## GitHub
+
+### Actions
+
+| action                                  | test                                                                                                                                                                                                     |
+| --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [checkout](./.github/actions/checkout/) | [![Test actions/checkout](https://github.com/percebus/commons/actions/workflows/test_actions__checkout.yml/badge.svg)](https://github.com/percebus/commons/actions/workflows/test_actions__checkout.yml) |
