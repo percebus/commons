@@ -26,14 +26,14 @@ runs:
   steps:
     - uses: percebus/commons/.github/actions/checkout@main
       with:
-        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-        submodules: ${{ matrix.submodules }}
-        fetch-depth: ${{ matrix.fetch-depth }}
-        ls_options: ${{ matrix.ls_options }}
+        ssh-private-key: ${{ inputs.ssh-private-key }}
+        submodules: ${{ intpus.submodules }}
+        fetch-depth: ${{ intpus.fetch-depth }}
+        ls_options: ${{ intpus.ls_options }}
 
     - uses: percebus/commons/.github/actions/checkout@main
       with:
-        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+        ssh-private-key: ${{ inputs.ssh-private-key }}
         repository: percebus/commons
         path: repositories/commons
         ls_options: ${{ inputs.ls_options }}
