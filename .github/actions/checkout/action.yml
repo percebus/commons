@@ -24,14 +24,14 @@ inputs:
 runs:
   using: composite
   steps:
-    - uses: percebus/commons/.github/actions/checkout@main
+    - uses: percebus/github-actions-common/.github/actions/checkout@main
       with:
         ssh-private-key: ${{ inputs.ssh-private-key }}
         submodules: ${{ inputs.submodules }}
         fetch-depth: ${{ inputs.fetch-depth }}
         ls_options: ${{ inputs.ls_options }}
 
-    - uses: percebus/commons/.github/actions/checkout@main
+    - uses: percebus/github-actions-common/.github/actions/checkout@main
       with:
         ssh-private-key: ${{ inputs.ssh-private-key }}
         repository: percebus/commons
