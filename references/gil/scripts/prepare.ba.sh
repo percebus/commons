@@ -10,7 +10,7 @@ set -x
 # Upgrades top-level dependencies, like pipx
 bash ${scripts_path}/gil/setup.ba.sh
 
-bash ./repos/commons/scripts/prepare.ba.sh
+bash ./repositories/commons/scripts/prepare.ba.sh
 
 set +x
 set +e
