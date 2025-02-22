@@ -27,9 +27,9 @@ runs:
     - uses: percebus/commons/.github/actions/checkout@main
       with:
         ssh-private-key: ${{ inputs.ssh-private-key }}
-        submodules: ${{ intpus.submodules }}
-        fetch-depth: ${{ intpus.fetch-depth }}
-        ls_options: ${{ intpus.ls_options }}
+        submodules: ${{ inputs.submodules }}
+        fetch-depth: ${{ inputs.fetch-depth }}
+        ls_options: ${{ inputs.ls_options }}
 
     - uses: percebus/commons/.github/actions/checkout@main
       with:
