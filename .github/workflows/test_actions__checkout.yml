@@ -9,6 +9,8 @@ jobs:
     name: "default"
     steps:
       - uses: percebus/commons/.github/actions/checkout@main
+        with:
+          repository: percebus/percebus-assets
 
       - name: ls repositories
         run: ls ./repositories
@@ -35,6 +37,7 @@ jobs:
     steps:
       - uses: percebus/commons/.github/actions/checkout@main
         with:
+          repository: percebus/percebus-assets
           ls_options: ${{ matrix.ls_options }}
 
   fetch-depth__matrix:
@@ -58,4 +61,5 @@ jobs:
     steps:
       - uses: percebus/commons/.github/actions/checkout@main
         with:
+          repository: percebus/percebus-assets
           fetch-depth: ${{ matrix.fetch-depth }}

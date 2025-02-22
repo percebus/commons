@@ -5,6 +5,12 @@ inputs:
     description: SSH private key
     required: false
 
+  # Only for testing
+  repository:
+    description: repository
+    required: false
+    default: ${{ github.repository }}
+
   submodules:
     description: whether to update submodules
     required: false
@@ -27,6 +33,7 @@ runs:
     - uses: percebus/commons/.github/actions/checkout@main
       with:
         ssh-private-key: ${{ inputs.ssh-private-key }}
+        repository: ${{ inputs.repository }}
         submodules: ${{ inputs.submodules }}
         fetch-depth: ${{ inputs.fetch-depth }}
         ls_options: ${{ inputs.ls_options }}
