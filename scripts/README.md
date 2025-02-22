@@ -4,7 +4,7 @@ This directory contains scripts that are used to setup any and all projects.
 
 ## Setup
 
-All these setups assume that the `commons` repository is located in `repos/commons`.
+All these setups assume that the `commons` repository is located in `repositories/commons`.
 
 ### scripts/prepare.ba.sh
 
@@ -26,7 +26,7 @@ All these setups assume that the `commons` repository is located in `repos/commo
 
 ```gitignore
 # commons/scripts
-repos/
+repositories/
 _scripts/
 ```
 
@@ -40,7 +40,7 @@ _scripts/
     "setup": "npm run npm:install:global:all",
     "setup:ci": "npm run npm:install:global:ci",
 
-    "scripts:prepare": "bash repos/commons/scripts/prepare.ba.sh",
+    "scripts:prepare": "bash repositories/commons/scripts/prepare.ba.sh",
     "bower:update": "bower update --allow-root",
     "prebower:install": "npm run bower:update",
     "bower:install": "bower install --allow-root",
@@ -73,7 +73,7 @@ $> pip install gil
 #### .gitlinks
 
 ```
-commons repos/commons git@github.com:percebus/commons.git main
+commons repositories/commons git@github.com:percebus/commons.git main
 ```
 
 [See a `.gitlinks` example](../references/gil/commons.gitlinks)
@@ -87,5 +87,5 @@ $> gil clone
 #### scripts/prepare.ba.sh
 
 ```bash
-$> bash repos/commons/scripts/prepare.ba.sh
+$> bash repositories/commons/scripts/prepare.ba.sh
 ```

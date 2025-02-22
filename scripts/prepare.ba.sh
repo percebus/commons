@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# NOTE: Merges repos/commons/scripts and scripts into _scripts
+# NOTE: Merges repositories/commons/scripts and scripts into _scripts
 
 set -e
 set -x
@@ -13,7 +13,7 @@ rm -rf ${scripts_path}
 
 # Copy commons scripts into _scripts
 # FIX: https://unix.stackexchange.com/a/18718/103371
-cp -R ./repos/commons/scripts ${scripts_path}
+cp -R ./repositories/commons/scripts ${scripts_path}
 
 # override _scripts with scripts in the other repo (if any)
 # Or skip if the folder does NOT exist

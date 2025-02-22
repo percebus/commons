@@ -31,8 +31,17 @@ runs:
         fetch-depth: ${{ matrix.fetch-depth }}
         ls_options: ${{ matrix.ls_options }}
 
-    # TODO git checkout commons inside repos/commons
+    - uses: percebus/github-actions-common/.github/actions/checkout@main
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+        repository: percebus/commons
+        path: repositories/commons
+        ls_options: ${{ inputs.ls_options }}
 
     - name: scripts/prepare.ba.sh
       shell: bash
-      run: bash scripts/prepare.ba.sh
+      run: bash repositories/commons/scripts/prepare.ba.sh
+
+    - name: ls _scripts
+      shell: bash
+      run: ls ${{ inputs.ls_options }} repositories/commons/_scripts
