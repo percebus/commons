@@ -3,9 +3,9 @@
 set -e
 set -x
 
-python -m pip install --upgrade pip
-python -m pip install pipx
-python -m pipx install gil
+pip install --upgrade pip
+pip install pipx
+pipx install gil
 pipx run -- gil clone
 
 
