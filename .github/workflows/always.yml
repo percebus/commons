@@ -4,6 +4,10 @@ on:
   push:
   workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
 
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
+
 jobs:
   lint:
     uses: percebus/github-actions-npm/.github/workflows/run_script.yml@main
