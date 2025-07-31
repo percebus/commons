@@ -4,9 +4,9 @@
   "description": "github workflows, DevOps, scripts and other re-usable assets",
   "main": "index.js",
   "scripts": {
-    "prettier": "prettier .",
-    "prettier:write": "npm run prettier -- --write",
-    "prettier:check": "npm run prettier -- --check",
+    "_prettier": "prettier .",
+    "prettier:write": "npm run _prettier -- --write",
+    "prettier:check": "npm run _prettier -- --check",
     "lint": "npm run prettier:check",
     "style": "npm run prettier:write",
     "poststyle": "npm run lint",
@@ -25,7 +25,7 @@
     "scripts"
   ],
   "author": "JCystems",
-  "license": "SEE LICENSE IN LICENSE.md",
+  "license": "SEE LICENSE IN LICENSE",
   "bugs": {
     "url": "https://github.com/percebus/commons/issues"
   },
