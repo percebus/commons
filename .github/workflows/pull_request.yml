@@ -4,7 +4,6 @@ name: Pull Request
 #  Please ensure you are using the "pull_request" event for this workflow."
 on:
   pull_request:
-  workflow_call: # SRC: https://docs.github.com/en/actions/using-workflows/reusing-workflows
 
 permissions:
   contents: read
