@@ -8,8 +8,31 @@ concurrency:
   group: ${{ github.ref }}-${{ github.workflow }}
   cancel-in-progress: true
 
+permissions:
+  contents: read
+
 jobs:
   lint:
     uses: percebus/github-actions-npm/.github/workflows/run_script.yml@main
     with:
       script: lint
+
+  codeQL:
+    needs: lint
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language:
+          - actions
+          - javascript
+          - python
+
+    name: "CodeQL: ${{ matrix.language }}"
+    uses: percebus/github-actions-compliance/.github/workflows/codeql_analyze.yml@main
+    with:
+      language: ${{ matrix.language }}
