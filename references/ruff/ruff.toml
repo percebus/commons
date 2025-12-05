@@ -1,0 +1,62 @@
+line-length = 150
+indent-width = 4
+show-fixes = true
+
+exclude = [
+    ".git",
+    "typings",
+]
+
+# Minimum Python version: 3.13
+target-version = "py313"
+
+[format]
+
+# Like Black:
+# use double quotes for strings.
+quote-style = "double"
+
+# indent with spaces, rather than tabs.
+indent-style = "space"
+
+# respect magic trailing commas.
+skip-magic-trailing-comma = false
+
+# automatically detect the appropriate line ending.
+line-ending = "auto"
+
+
+[lint]
+select = [
+    "D",   # Docstrings
+    "E",   # pycodestyle
+    "F",   # Pyflakes
+    "I",   # isort
+    "PL",  # PyLint
+    "SIM", # flake8-simplify
+    "TID", # flake8-tidy-imports
+    "W",   # warning
+]
+
+# Additional rules
+extend-select = [
+    "C4",  # flake8-comprehensions
+    "ICN", # flake8-import-conventions
+    "ISC", # flake8-implicit-str-concat
+    "N",   # pep8-naming
+    "SIM", # flake8-simplify
+    # "UP",  # pyupgrade PEP604
+    "TCH"  # flake8-type-checking
+]
+
+fixable = ["ALL"]
+ignore = [
+    "TD",  # TODO
+    "D104",  # Missing docstring in public package, like empty __init__.py # XXX?
+]
+
+[lint.pydocstyle]
+convention = "numpy"
+
+[lint.per-file-ignores]
+"tests/*" = ["D", "N"]
