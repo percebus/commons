@@ -1,0 +1,15 @@
+{
+  "venvPath": ".",
+  "venv": ".venv",
+  "defineConstant": { "DEBUG": true },
+  "typeCheckingMode": "strict",
+  "include": ["src"],
+  "strict": ["src"],
+  "exclude": [
+    ".venv",
+    "typings",
+    "**/__pycache__",
+    "**/test*.py",
+    "**/*.as-is.py"
+  ]
+}

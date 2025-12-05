@@ -1,12 +1,15 @@
+#!/bin/bash
 
 set -e
-set -v
+set -x
+
+pip_cli_opts="--verbose --upgrade"
 
 # pip upgrades pip
-pip install --verbose --upgrade pip
+pip install ${pip_cli_opts} pip
 
 # pip upgrades pipx
-pip install --verbose --upgrade --requirement requirements.upgrade.txt
+pip install ${pip_cli_opts} --requirement requirements.upgrade.txt
 
-set +v
+set +x
 set +e

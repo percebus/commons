@@ -8,8 +8,9 @@
     "prettier:write": "npm run _prettier -- --write",
     "prettier:check": "npm run _prettier -- --check",
     "lint": "npm run prettier:check",
-    "style": "npm run prettier:write",
-    "poststyle": "npm run lint",
+    "format": "npm run prettier:write",
+    "postformat": "npm run lint",
+    "style": "npm run format",
     "pretest": "npm run lint",
     "test": "exit 0"
   },
