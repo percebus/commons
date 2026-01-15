@@ -3,10 +3,10 @@
 set -e
 set -v
 
-pip freeze
+python -m pip freeze
 
 # Backup pip-installed dependencies
-pip freeze --verbose > requirements.frozen.txt
+python -m pip freeze --verbose > requirements.frozen.txt
 
 set +v
 set +e

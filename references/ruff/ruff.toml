@@ -1,10 +1,12 @@
 line-length = 150
 indent-width = 4
 show-fixes = true
-
 exclude = [
-    ".git",
-    "typings",
+    ".venv",
+    ".pytest_cache",
+    ".ruff_cache",
+    "__pycache__",
+    "typings"
 ]
 
 # Minimum Python version: 3.13
@@ -28,35 +30,30 @@ line-ending = "auto"
 
 [lint]
 select = [
-    "D",   # Docstrings
+    "C4",  # flake8-comprehensions
     "E",   # pycodestyle
     "F",   # Pyflakes
     "I",   # isort
-    "PL",  # PyLint
+    "ICN", # flake8-import-conventions
+    "ISC", # flake8-implicit-str-concat
+    "N",   # pep8-naming
+    "PL",  # PylLint
     "SIM", # flake8-simplify
+    "TCH",  # flake8-type-checking
     "TID", # flake8-tidy-imports
+    "UP",  # pyupgrade PEP604
     "W",   # warning
 ]
 
 # Additional rules
+# "This is particularly useful in mono repositories
+#  where you want to establish a base standard for the entire company
+#  but allow projects to customize the configuration to best fit their needs."
 extend-select = [
-    "C4",  # flake8-comprehensions
-    "ICN", # flake8-import-conventions
-    "ISC", # flake8-implicit-str-concat
-    "N",   # pep8-naming
-    "SIM", # flake8-simplify
-    # "UP",  # pyupgrade PEP604
-    "TCH"  # flake8-type-checking
 ]
 
 fixable = ["ALL"]
 ignore = [
+    "D1",  # Missing docstring
     "TD",  # TODO
-    "D104",  # Missing docstring in public package, like empty __init__.py # XXX?
 ]
-
-[lint.pydocstyle]
-convention = "numpy"
-
-[lint.per-file-ignores]
-"tests/*" = ["D", "N"]

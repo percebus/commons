@@ -18,10 +18,10 @@ fi
 set -x
 
 # all pip dependencies (generated w/ poetry)
-pip install --verbose --requirement ${requirements}
+python -m pip install --verbose --requirement ${requirements}
 
 # The project itself (to use src)
-pip install --verbose ${PIP_CLI_OPTS} .
+python -m pip install --verbose ${PIP_CLI_OPTS} .
 
 set +x
 set +e
