@@ -1,0 +1,8 @@
+[tasks]
+    [tasks.pyright]
+        help = "Checks type hints with pyright"
+        cmd = "uv run pyright --warnings"
+
+    [tasks.lint]
+        help = "Checks linting"
+        sequence = ["pyright"]
