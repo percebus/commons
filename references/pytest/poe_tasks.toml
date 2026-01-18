@@ -1,0 +1,4 @@
+[tasks]
+    [tasks.test]
+        help = "Run tests"
+        cmd = "pytest tests"

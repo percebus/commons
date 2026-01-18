@@ -1,0 +1,19 @@
+[tasks]
+    [tasks.ruff_format]
+        help = "format codebase with ruff"
+        cmd = "ruff format ./src ./tests"
+
+    [tasks.ruff_check-fix]
+        help = "fix codebase with ruff"
+        cmd = "ruff check --fix ./src ./tests"
+    [tasks.ruff_check]
+        help = "lint codebase with ruff"
+        cmd = "ruff check ./src ./tests"
+
+    [tasks.lint]
+        help = "Checks linting"
+        sequence = ["ruff_check"]
+
+    [tasks.format]
+        help = "Reformat"
+        sequence = ["ruff_format", "ruff_check-fix", "lint"]

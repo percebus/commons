@@ -1,0 +1,49 @@
+[tasks]
+    [tasks.clean]
+        help = "Clean the project"
+        cmd = "exit 1"  # TODO CHANGE
+
+    [tasks.uv-sort]
+        help = "fixes order of imports"
+        cmd = "uv run uv-sort"
+
+    [tasks.uv-sort_check]
+        help = "Checks if uv-sort was fixed"
+        cmd = "uv run uv-sort --check"
+
+    [tasks.lint]
+        help = "Checks linting"
+        sequence = ["uv-sort_check"]
+
+    [tasks.format]
+        help = "Reformat"
+        sequence = ["uv-sort", "lint"]
+
+    [tasks.test]
+        help = "Run tests"
+        cmd = "exit 1"  # TODO CHANGE
+
+    [tasks.dev]
+    help = "Run the development tasks"
+    sequence = ["clean", "format", "test"]
+
+    [tasks.build]
+    help = "Build the project"
+    cmd = "uv build --all-packages --wheel"
+
+    [tasks.sync_all]
+    help = "uv sync everything"
+    cmd = "uv sync --locked --all-groups"
+
+    [tasks.sync_release]
+    help = "uv sync release"
+    cmd = "uv sync --locked"
+
+    [tasks.sync]
+    help = "Run the CI pipeline tasks"
+    sequence = ["sync_all"]
+
+
+    [tasks.ci]
+    help = "Run the CI pipeline tasks"
+    sequence = ["sync_all", "lint", "test", "build"]
