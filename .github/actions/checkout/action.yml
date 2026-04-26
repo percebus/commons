@@ -1,19 +1,52 @@
 name: checkout
-description: checkout and do some other things
+description: git checkout and _scripts from commons repository
 inputs:
+  # The SSH key is configured with the local
+  # git config, which enables your scripts to run authenticated git commands. The
+  # post-job step removes the SSH key.
+  #
+  # We recommend using a service account with the least permissions necessary.
+  #
+  # [Learn more about creating and using encrypted secrets](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets)
   ssh-private-key:
-    description: SSH private key
+    description: SSH key used to fetch the repository.
     required: false
 
-  submodules:
-    description: whether to update submodules
+  repository:
+    description: Repository name with owner. For example, actions/checkout
     required: false
-    default: "false"
+    default: ${{ github.repository }}
 
+  # When checking out the repository that triggered a workflow, this defaults to the reference or SHA for that event.
+  # Otherwise, uses the default branch.
+  ref:
+    description: The branch, tag or SHA to checkout.
+    required: false
+    default: ${{ github.ref }}
+
+  # Number of commits to fetch.
+  # 0 indicates all history for all branches and tags.
   fetch-depth:
     description: git checkout fetch-depth
     required: false
-    default: "0"
+    default: "1"
+
+  # Whether to checkout submodules: `true` to checkout submodules or `recursive` to
+  # recursively checkout submodules.
+  #
+  # When the `ssh-key` input is not provided,
+  # SSH URLs beginning with `git@github.com:` are converted to HTTPS.
+  #
+  # Default: false
+  submodules:
+    description: Whether to update submodules
+    required: false
+    default: "false"
+
+  path:
+    description: Relative path under $GITHUB_WORKSPACE to place the repository
+    required: false
+    default: ""
 
   ls_options:
     description: ls options
@@ -27,8 +60,9 @@ runs:
     - uses: percebus/github-actions-common/.github/actions/checkout@main
       with:
         ssh-private-key: ${{ inputs.ssh-private-key }}
-        submodules: ${{ inputs.submodules }}
+        ref: ${{ inputs.ref }}
         fetch-depth: ${{ inputs.fetch-depth }}
+        submodules: ${{ inputs.submodules }}
         ls_options: ${{ inputs.ls_options }}
 
     - uses: percebus/github-actions-common/.github/actions/checkout@main
