@@ -59,7 +59,7 @@ Then
 
 ### w/ gil
 
-For reference [see `references/gil`](../references/gil/)
+For reference [see `references/gil`](../references/commons/gil/)
 
 #### via pip
 
@@ -68,7 +68,7 @@ $> pip install pip --upgrade
 $> pip install gil
 ```
 
-[See `requirements.upgrade.txt`](../references/gil/requirements.upgrade.txt)
+[See `requirements.upgrade.txt`](../references/commons/gil/requirements.upgrade.txt)
 
 #### .gitlinks
 
@@ -76,7 +76,7 @@ $> pip install gil
 commons repositories/commons git@github.com:percebus/commons.git main
 ```
 
-[See a `.gitlinks` example](../references/gil/commons.gitlinks)
+[See a `.gitlinks` example](../references/commons/gil/commons.gitlinks)
 
 #### gil clone
 
