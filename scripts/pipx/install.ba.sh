@@ -8,10 +8,13 @@ if [[ -z $(grep '[^[:space:]]' $filename) ]]; then
   exit 0
 fi
 
-set -v
+set -x
+cat ${filename}
+set +x
 
+set -v
 cat ${filename} | sed 's/.*/"&"/' | xargs -n 1 pipx install
 pipx list
-
 set +v
+
 set +e

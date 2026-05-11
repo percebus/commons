@@ -2,6 +2,7 @@ line-length = 150
 indent-width = 4
 show-fixes = true
 exclude = [
+    ".git",
     ".venv",
     ".pytest_cache",
     ".ruff_cache",

@@ -1,9 +1,7 @@
 # python
-.venv/
-__pycache__/
 .*_cache/
+__pycache__/
 .pytest_cache/
-.ruff_cache/
 
 # default # SRC: https://prettier.io/docs/en/ignore.html
 **/.git
