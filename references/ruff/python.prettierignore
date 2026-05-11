@@ -1,8 +1,6 @@
 # python
-.venv/
 .*_cache/
 __pycache__/
-.pytest_cache/
 .ruff_cache/
 
 # default # SRC: https://prettier.io/docs/en/ignore.html
