@@ -1,0 +1,4 @@
+[tasks]
+    [tasks.clean]
+        help = "Clean the project"
+        cmd = "uvx pyclean . --debris"
