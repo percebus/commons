@@ -1,4 +1,8 @@
 [tasks]
     [tasks.test]
         help = "Run tests"
-        cmd = "pytest tests"
+        cmd = "pytest tests -m 'not integration'"
+
+    [tasks.test_integration]
+        help = "Run tests"
+        cmd = "pytest tests -m 'integration'"

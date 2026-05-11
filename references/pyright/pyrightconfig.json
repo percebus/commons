@@ -3,6 +3,7 @@
   "venv": ".venv",
   "defineConstant": { "DEBUG": true },
   "typeCheckingMode": "strict",
+  "useLibraryCodeForTypes": true,
   "include": ["src"],
   "strict": ["src"],
   "exclude": [
