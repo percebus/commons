@@ -1,0 +1,4 @@
+
+# pytest-cov
+test*.xml
+test-results.xml
