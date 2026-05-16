@@ -1,14 +1,16 @@
 {
   "scripts": {
+    "npm:upgrade": "npm install --location=global npm@latest",
+    "pre_npm:install:global": "npm run npm:upgrade",
+    "_npm:install:global": "npm install --location=global",
+    "npm:install:global:all": "npm run _npm:install:global -- bower",
+    "npm:install:global:ci": "npm run _npm:install:global -- bower",
     "bower:update": "bower update --allow-root",
     "prebower:install": "npm run bower:update",
     "bower:install": "bower install --allow-root",
     "postbower:install": "npm run scripts:prepare",
-    "setup": "npm run bower:install",
-    "setup:ci": "npm run bower:install",
+    "setup": "npm:install:global:all && npm run bower:install",
+    "setup:ci": "npm:install:global:ci && npm run bower:install",
     "test": "exit 0"
-  },
-  "devDependencies": {
-    "prettier": "^3.8.3"
   }
 }

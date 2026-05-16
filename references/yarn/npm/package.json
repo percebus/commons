@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "npm:upgrade": "npm install --location=global npm@latest",
+    "pre_npm:install:global": "npm run npm:upgrade",
+    "_npm:install:global": "npm install --location=global",
+    "npm:install:global:all": "npm run _npm:install:global -- yarn",
+    "npm:install:global:ci": "exit 0",
+    "setup": "npm run npm:install:global:all",
+    "setup:ci": "npm run npm:install:global:ci",
+    "yarn:licenses:prod:list": "yarn licenses --prod list > LICENSES.txt",
+    "yarn:licenses:prod:generate-disclaimer": "yarn licenses --prod generate-disclaimer > LICENSES.md",
+    "yarn:licenses:prod": "npm run yarn:licenses:prod:list && npm run yarn:licenses:prod:generate-disclaimer",
+    "LICENSES": "npm run yarn:licenses:prod",
+    "test": "exit 0"
+  }
+}
