@@ -1,0 +1,40 @@
+[tasks]
+    [tasks.clean]
+        help = "Clean the project"
+        cmd = "FIXME"
+
+    [tasks.lint]
+        help = "Checks linting"
+        sequence = ["FIXME"]
+
+    [tasks.format]
+        help = "Reformat"
+        sequence = ["FIXME"]
+
+    [tasks.test]
+        help = "Run tests"
+        cmd = "FIXME"
+
+    [tasks.dev]
+    help = "Run the development tasks"
+    sequence = ["clean", "format", "test"]
+
+    [tasks.build]
+    help = "Build the project"
+    cmd = "FIXME"
+
+    [tasks.sync_all]
+    help = "Sync everything"
+    cmd = "FIXME"
+
+    [tasks.sync_release]
+    help = "Sync only needed"
+    cmd = "FIXME"
+
+    [tasks.sync]  # default alias
+    help = "uv sync"
+    sequence = ["sync_all"]
+
+    [tasks.ci]
+    help = "Run the CI pipeline tasks"
+    sequence = ["sync_all", "lint", "test", "build"]
