@@ -29,7 +29,7 @@
 
     [tasks.sync_release]
     help = "Sync only needed"
-    cmd = "FOX,E"
+    cmd = "FIXME"
 
     [tasks.sync]  # default alias
     help = "uv sync"
