@@ -9,7 +9,7 @@
 
     [tasks.format]
         help = "Reformat"
-        sequence = ["FOX,E"]
+        sequence = ["FIXME"]
 
     [tasks.test]
         help = "Run tests"
