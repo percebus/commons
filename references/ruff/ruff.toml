@@ -32,6 +32,7 @@ line-ending = "auto"
 [lint]
 select = [
     "C4",  # flake8-comprehensions
+    "D",   # Docstrings
     "E",   # pycodestyle
     "F",   # Pyflakes
     "I",   # isort
