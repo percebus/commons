@@ -41,7 +41,7 @@ select = [
     "N",   # pep8-naming
     "PL",  # PylLint
     "SIM", # flake8-simplify
-    "TCH",  # flake8-type-checking
+    "TCH", # flake8-type-checking
     "TID", # flake8-tidy-imports
     "UP",  # pyupgrade PEP604
     "W",   # warning
